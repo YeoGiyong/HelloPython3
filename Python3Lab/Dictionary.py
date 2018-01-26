@@ -15,7 +15,46 @@ Customer = {'custid':'1','name':'박지성','address':'영국맨체스터','phon
 print(Book)
 
 books_list =[]
-books_list.append(Book)
+books_list.append(Book)     #생성한 딕셔너리를 배열에 저장
 books_list.append(Book)
 books_list.append(Book)
 print(books_list)
+
+# 딕셔너리 처리 메서드
+print('1' in Book)          #딕셔너리에 in 연산자는 key를 검색
+print('bookid' in Book)
+
+print(Book['bookid'])       #딕셔너리에서 키로 검색
+print(Book['bookname'])
+print(Book['price'])
+#print(Book['orderid'])      #존재하지 않는 키 검색시 오류!
+
+print(Book.get('bookname'))
+print(Book.get('orderid'))  #존재하지 않는 키 검색시 None출력
+
+bkname = Book['bookname']   #키로 검색 후 값 출력
+print(bkname)
+
+print(Book.get('bookid'))
+Book['bookid']=99         #키로 값 수정
+print(Book.get('bookid'))
+
+print(Book)
+Book.update({'판형':'3x4'})   #새로운 키:값 추가
+print(Book)
+
+print(Book)
+Book.update({'판형':'6x10'})   #새로운 키:값 수정
+print(Book)
+
+del Book['판형']              #기존 키 삭제
+print(Book)
+
+#Book.clear()                   #모든 키 삭제
+
+print(Book.keys())             #모든 키를 출력
+print(Book.values())           #모든 값을 출력
+print(Book.items())            #모든 키:값을 튜플로 출력
+print(list(Book.items()))      #모든 키:값을 튜플-리스트로 출력
+
+
