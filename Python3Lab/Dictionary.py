@@ -55,6 +55,8 @@ print(Book)
 print(Book.keys())             #모든 키를 출력
 print(Book.values())           #모든 값을 출력
 print(Book.items())            #모든 키:값을 튜플로 출력
-print(list(Book.items()))      #모든 키:값을 튜플-리스트로 출력
+
+items = Book.items()           #모든 키:값을 튜플-리스트로 출력
+print(list(items))
 
 
